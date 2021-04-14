@@ -22,7 +22,7 @@ Route:: get("/","Users\LandingPagesController@index");
 Route::resource('contact','Users\ContactsController');
 
 
-Auth::routes();
+Auth::routes(['register' => false]);
 
 Route::get('/admin', 'HomeController@index')->name('home');
 Route::get('/home', 'HomeController@index')->name('home');
